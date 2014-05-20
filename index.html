@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es" data-ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Crud en Angular</title>	
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row" data-ng-controller="appController">
+			<h1>CRUD en Angular</h1>
+			<hr>
+			<ol class="breadcrumb">
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#/add">Añadir Usuario</a></li>
+			</ol>
+			<div class="container" data-ng-view>
+				<!--Acá se visualizara Todo-->
+			</div>
+		</div>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.js"></script>	
+	<script type="text/javascript" src="js/app.js">j</script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>

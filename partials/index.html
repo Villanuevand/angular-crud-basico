@@ -1,0 +1,45 @@
+<!--Index-->
+<!--
+
+-->
+<!--si no hay usuarios que mostrar, con la directiva ng-show comprobamos
+el array usuarios y mostramos un mensaje-->
+<div class="" data-ng-show="usuarios.length == 0">
+	<h3 class=>No hay usuarios para mostrar</h2>
+</div>
+<!--creamos un campo de texto que nos servirá para buscar usuarios, simplemente
+le damos como ng-model el mismo que le demos al atributo filter en el loop de abajo,
+aparte de un buscador es un autocompletar, y más sencillo no puede ser-->
+<!--sólo si hay usuarios mostramos el buscador-->
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">Buscador</h3>
+	</div>
+	<div class="panel-body">
+		<input type="text" ng-model="buscador"  data-ng-show="usuarios.length > 0" />	
+	</div>		
+</div>
+<hr>
+
+<!--como nuestros usuarios no tienen id, la forma de poder eliminarlos es recorriendo
+el array añadiendo la clave id, así podremos saber a cuál hacer referencia, de esta forma
+al añadir usuarios y no tener definida su id, angularjs le asignará la siguiente al último usuario
+existente, es decir, un campo autoincremental-->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2 col-md-3" data-ng-repeat="(id,usuario) in usuarios | filter: buscador">
+			<a href="#/info/{{id}}">
+				<ul>
+					<li>Nombre:{{usuario.nombre}}</li>
+					<li>Web:{{usuario.web}}</li>
+					<li>Edad:{{usuario.edad}}</li>
+					<li>Profesión:{{usuario.profesion}}</li>
+				</ul>	        	      
+	        </a>
+	        <a href="#/edit/{{id}}" class="btn btn-warning">Editar</a>	       	
+	        <a href="#/remove/{{id}}" class="btn btn-danger">Eliminar</a>	        
+	        <hr>
+	</div>
+		</div>		
+	</div>
+	

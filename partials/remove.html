@@ -1,0 +1,17 @@
+<!--Remove-->
+<!--aquí simplemente tenemos la opción de eliminar al usuario-->
+<div class="alert alert-danger">
+	<h3 class="subheader">¿Estás seguro que deseas eliminar al usuario {{usuario.nombre}}?</h2>
+</div>
+<div class="row">
+	<!--asociamos a la directiva ng-click la función removeUser, 
+	que lo que hace es eliminar del array al usuario-->
+	<table class="table">
+		<tr>
+			<td>
+				<a href="#/" class="btn btn-primary">Volver sin eliminar</a>
+				<a href="" class="btn btn-danger" data-ng-click="removerUsuario()">Eliminar</a>				
+			</td>			
+		</tr>		
+	</table>	
+</div>
